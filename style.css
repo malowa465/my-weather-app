@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+*{
+    margin: 0;
+    font-family: 'Audiowide';
+  }
+html{
+  background: black;
+}
+body{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    min-width: 1000px;
+} 
+
+.moon{
+  width: 500px;
+  height: 500px;
+  background: none;
+  position: relative;
+  margin: auto;
+  display: block;
+}
+.circle{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: grey;
+  border-radius: 50%;
+  overflow: hidden;
+  animation-name: boxShadow;
+  animation-duration: 40s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.innerCircle{
+  height:100%;
+  width: 100%;
+  background: rgba(300,300,220, .5);
+  border-radius: 50%;
+  z-index: 1;
+  overflow: hidden;
+}
+.greyCircle{
+  width: 25%;
+  height: 25%;
+  background: grey;
+  border-radius: 50%;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+}
+.greyCircle2{
+  width: 15%;
+  height: 15%;
+  background: grey;
+  border-radius: 50%;
+  position: absolute;
+  top: 84%;
+  left: 40%;
+}
+.greyCircle3{
+  width: 8%;
+  height: 8%;
+  background: grey;
+  border-radius: 50%;
+  position: absolute;
+  top: 70%;
+  left: 40%;
+  overflow: hidden;
+}
+.greyCircle4{
+  width: 20%;
+  height: 20%;
+  background: grey;
+  border-radius: 50%;
+  position: absolute;
+  top: 8%;
+  left: 10%;
+  overflow: hidden;
+}
+.darkCircle{
+  width: 100%;
+  height: 100%;
+  background: black;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 2;
+  animation-name: eclipse;
+  animation-duration: 40s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes eclipse{
+  from {left: 100%;}
+  to {left: 10%;}
+}
+@keyframes boxShadow{
+  from {box-shadow: white 0px 0px 55px 4px;}
+  to {box-shadow: none;}
+}
+.sun{
+  width: 500px;
+  height: 500px;
+  background: none;
+  position: relative;
+  margin: auto;
+  z-index: -2;
+  overflow: hidden;
+  display: none;
+}
+.circleSun{
+  background: black;
+  position: absolute;
+  left: 20%;
+  top: 20%;
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+}
+.circleBlack{
+  background: orange;
+  width: 93%;
+  height: 93%;
+  margin: auto;
+  margin-top: 3.5%;
+  border-radius: 50%;
+}
+.ray1{
+  background: red;
+  width: 40px;
+  height: 100%;
+  position: relative;
+  z-index: -1;
+  left: 46%;
+  animation-name: rotateRays;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.ray2{
+  background: red;
+  width: 40px;
+  height: 100%;
+  position: relative;
+  z-index: -1;
+  transform: rotate(45deg);
+}
+.ray3{
+  background: red;
+  width: 40px;
+  height: 100%;
+  position: relative;
+  z-index: -1;
+  transform: rotate(45deg);
+}
+.ray4{
+  background: red;
+  width: 40px;
+  height: 100%;
+  position: relative;
+  z-index: -1;
+  transform: rotate(45deg);
+}
+@keyframes rotateRays{
+  0%   {transform: rotate(90deg);}
+  25%  {transform: rotate(180deg);}
+  50%  {transform: rotate(270deg);}
+  100% {transform: rotate(360deg);}
+}
+/*Right Side*/
+.infoField{
+  width: 500px;
+  height: 100vh;
+  min-height: auto;
+  margin: auto;
+  display: grid;
+  grid-template-rows: 30% 10% 40%;
+}
+.temprature{
+  display: flex;
+}
+.number{
+  flex: 1;
+  margin-top: auto;
+}
+#number{
+  font-size: 200px;
+  color: white;
+}
+.unit{
+  position: absolute;
+  left: 78%;
+  color: white;
+}
+.degUnit{
+  position: absolute;
+  left: 80%;
+  font-size: 30px;
+  color: yellow;
+}
+.location{
+  display: flex;
+  align-items: flex-end;
+}
+#location{
+  color: blue;
+  font-size:50px;
+}
+.searchBar{
+  background-color: black;
+  height: 60px;
+  width: 100%;
+  border: none;
+}
+.searchBar:focus{
+  outline: none;
+}
+::placeholder{
+  color: white;
+  opacity: 1;
+}
+.situation{
+  background: grey;
+  display: flex;
+  align-items: center;
+}
+#situation{
+  font-size: 30px;
+  color: red;
+}
+.time{
+  flex:1;
+  margin-top: auto;
+  margin-bottom: 8.9%;
+  margin-left: 5%;
+}
+#time{
+  color: rgb(255, 0, 43);
+  font-size: 40px; 
+}
